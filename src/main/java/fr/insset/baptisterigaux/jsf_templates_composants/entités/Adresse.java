@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.insset.paulgilliard.jsf_templates_composants.entités;
+package fr.insset.baptisterigaux.jsf_templates_composants.entités;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author paul
  */
 @Entity
-public class Client implements Serializable {
+public class Adresse implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -42,10 +42,10 @@ public class Client implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Client)) {
+        if (!(object instanceof Adresse)) {
             return false;
         }
-        Client other = (Client) object;
+        Adresse other = (Adresse) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -54,32 +54,38 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.insset.paulgilliard.jsf_templates_composants.entit\u00e9s.Client[ id=" + id + " ]";
+        return "fr.insset.baptisterigaux.jsf_templates_composants.entit\u00e9s.Adresse[ id=" + id + " ]";
+    }
+    
+    
+
+    public Ville getVille() {
+        return ville;
     }
 
-    public String getNom() {
-        return nom;
+    public void setVille(Ville ville) {
+        this.ville = ville;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-  
-
-    public Adresse getAdresse() {
-        return adresse;
+    public String getNumEtRue() {
+        return numEtRue;
     }
 
-    public void setAdresse(Adresse adresse) {
-        this.adresse = adresse;
+    public void setNumEtRue(String numEtRue) {
+        this.numEtRue = numEtRue;
+    }
+
+    public String getCodePostal() {
+        return codePostal;
+    }
+
+    public void setCodePostal(String codePostal) {
+        this.codePostal = codePostal;
     }
     
     
-    private String      nom;
-    
-    @OneToOne
-    private Adresse     adresse;
-    
-    
-    
+    private String          numEtRue;
+    private String          codePostal;
+    @ManyToOne
+    private Ville           ville;
 }

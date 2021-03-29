@@ -1,9 +1,9 @@
-package fr.insset.paulgilliard.jsf_templates_composants.jpa;
+package fr.insset.baptisterigaux.jsf_templates_composants.jpa;
 
-import fr.insset.paulgilliard.jsf_templates_composants.entités.Ville;
-import fr.insset.paulgilliard.jsf_templates_composants.jpa.util.JsfUtil;
-import fr.insset.paulgilliard.jsf_templates_composants.jpa.util.PaginationHelper;
-import fr.insset.paulgilliard.jsf_templates_composants.jsf.VilleFacade;
+import fr.insset.baptisterigaux.jsf_templates_composants.entités.Ville;
+import fr.insset.baptisterigaux.jsf_templates_composants.jpa.util.JsfUtil;
+import fr.insset.baptisterigaux.jsf_templates_composants.jpa.util.PaginationHelper;
+import fr.insset.baptisterigaux.jsf_templates_composants.jsf.VilleFacade;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -25,7 +25,7 @@ public class VilleController implements Serializable {
     private Ville current;
     private DataModel items = null;
     @EJB
-    private fr.insset.paulgilliard.jsf_templates_composants.jsf.VilleFacade ejbFacade;
+    private fr.insset.baptisterigaux.jsf_templates_composants.jsf.VilleFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

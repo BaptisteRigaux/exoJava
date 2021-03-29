@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.insset.paulgilliard.jsf_templates_composants.entités;
+package fr.insset.baptisterigaux.jsf_templates_composants.entités;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
  * @author paul
  */
 @Entity
-public class Commande implements Serializable {
+public class Client implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -43,10 +42,10 @@ public class Commande implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Commande)) {
+        if (!(object instanceof Client)) {
             return false;
         }
-        Commande other = (Commande) object;
+        Client other = (Client) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -55,9 +54,17 @@ public class Commande implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.insset.paulgilliard.jsf_templates_composants.entit\u00e9s.Commande[ id=" + id + " ]";
+        return nom;
     }
-    
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+  
 
     public Adresse getAdresse() {
         return adresse;
@@ -66,25 +73,13 @@ public class Commande implements Serializable {
     public void setAdresse(Adresse adresse) {
         this.adresse = adresse;
     }
-
-    public Date getDateCommande() {
-        return dateCommande;
-    }
-
-    public void setDateCommande(Date dateCommande) {
-        this.dateCommande = dateCommande;
-    }
-
-    public Float getMontant() {
-        return montant;
-    }
-
-    public void setMontant(Float montant) {
-        this.montant = montant;
-    }
     
-    private Date        dateCommande;
-    private Float       montant;
-    @ManyToOne
+    
+    private String      nom;
+    
+    @OneToOne
     private Adresse     adresse;
+    
+    
+    
 }

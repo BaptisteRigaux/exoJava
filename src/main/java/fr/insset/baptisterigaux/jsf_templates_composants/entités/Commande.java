@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.insset.paulgilliard.jsf_templates_composants.entités;
+package fr.insset.baptisterigaux.jsf_templates_composants.entités;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +18,7 @@ import javax.persistence.ManyToOne;
  * @author paul
  */
 @Entity
-public class Adresse implements Serializable {
+public class Commande implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -42,10 +43,10 @@ public class Adresse implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Adresse)) {
+        if (!(object instanceof Commande)) {
             return false;
         }
-        Adresse other = (Adresse) object;
+        Commande other = (Commande) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -54,38 +55,36 @@ public class Adresse implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.insset.paulgilliard.jsf_templates_composants.entit\u00e9s.Adresse[ id=" + id + " ]";
+        return "fr.insset.paulgilliard.jsf_templates_composants.entit\u00e9s.Commande[ id=" + id + " ]";
     }
     
+
+    public Adresse getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
+    }
+
+    public Date getDateCommande() {
+        return dateCommande;
+    }
+
+    public void setDateCommande(Date dateCommande) {
+        this.dateCommande = dateCommande;
+    }
+
+    public Float getMontant() {
+        return montant;
+    }
+
+    public void setMontant(Float montant) {
+        this.montant = montant;
+    }
     
-
-    public Ville getVille() {
-        return ville;
-    }
-
-    public void setVille(Ville ville) {
-        this.ville = ville;
-    }
-
-    public String getNumEtRue() {
-        return numEtRue;
-    }
-
-    public void setNumEtRue(String numEtRue) {
-        this.numEtRue = numEtRue;
-    }
-
-    public String getCodePostal() {
-        return codePostal;
-    }
-
-    public void setCodePostal(String codePostal) {
-        this.codePostal = codePostal;
-    }
-    
-    
-    private String          numEtRue;
-    private String          codePostal;
+    private Date        dateCommande;
+    private Float       montant;
     @ManyToOne
-    private Ville           ville;
+    private Adresse     adresse;
 }

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.insset.paulgilliard.jsf_templates_composants.jsf;
+package fr.insset.baptisterigaux.jsf_templates_composants.jsf;
 
-import fr.insset.paulgilliard.jsf_templates_composants.entités.Commande;
+import fr.insset.baptisterigaux.jsf_templates_composants.entités.Adresse;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author paul
  */
 @Stateless
-public class CommandeFacade extends AbstractFacade<Commande> {
+public class AdresseFacade extends AbstractFacade<Adresse> {
 
     @PersistenceContext(unitName = "my_persistence_unit")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class CommandeFacade extends AbstractFacade<Commande> {
         return em;
     }
 
-    public CommandeFacade() {
-        super(Commande.class);
+    public AdresseFacade() {
+        super(Adresse.class);
     }
     
 }

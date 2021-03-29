@@ -1,9 +1,9 @@
-package fr.insset.paulgilliard.jsf_templates_composants.jpa;
+package fr.insset.baptisterigaux.jsf_templates_composants.jpa;
 
-import fr.insset.paulgilliard.jsf_templates_composants.entités.Client;
-import fr.insset.paulgilliard.jsf_templates_composants.jpa.util.JsfUtil;
-import fr.insset.paulgilliard.jsf_templates_composants.jpa.util.PaginationHelper;
-import fr.insset.paulgilliard.jsf_templates_composants.jsf.ClientFacade;
+import fr.insset.baptisterigaux.jsf_templates_composants.entités.Client;
+import fr.insset.baptisterigaux.jsf_templates_composants.jpa.util.JsfUtil;
+import fr.insset.baptisterigaux.jsf_templates_composants.jpa.util.PaginationHelper;
+import fr.insset.baptisterigaux.jsf_templates_composants.jsf.ClientFacade;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -25,7 +25,7 @@ public class ClientController implements Serializable {
     private Client current;
     private DataModel items = null;
     @EJB
-    private fr.insset.paulgilliard.jsf_templates_composants.jsf.ClientFacade ejbFacade;
+    private fr.insset.baptisterigaux.jsf_templates_composants.jsf.ClientFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

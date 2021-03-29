@@ -1,4 +1,4 @@
-package fr.insset.paulgilliard.jsf_templates_composants.jpa.util;
+package fr.insset.baptisterigaux.jsf_templates_composants.jpa.util;
 
 import java.util.List;
 import javax.faces.application.FacesMessage;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.insset.paulgilliard.jsf_templates_composants.entités;
+package fr.insset.baptisterigaux.jsf_templates_composants.entités;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
@@ -53,7 +53,7 @@ public class Ville implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.insset.paulgilliard.jsf_templates_composants.entit\u00e9s.Ville[ id=" + id + " ]";
+        return nom;
     }
     
     private String          nom;

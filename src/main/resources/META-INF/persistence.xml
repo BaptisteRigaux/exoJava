@@ -3,10 +3,10 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="my_persistence_unit" transaction-type="JTA">
     <jta-data-source>jdbc/__default</jta-data-source>
-    <class>fr.insset.paulgilliard.jsf_templates_composants.entités.Client</class>
-    <class>fr.insset.paulgilliard.jsf_templates_composants.entités.Adresse</class>
-    <class>fr.insset.paulgilliard.jsf_templates_composants.entités.Ville</class>
-    <class>fr.insset.paulgilliard.jsf_templates_composants.entités.Commande</class>
+    <class>fr.insset.baptisterigaux.jsf_templates_composants.entités.Commande</class>
+    <class>fr.insset.baptisterigaux.jsf_templates_composants.entités.Client</class>
+    <class>fr.insset.baptisterigaux.jsf_templates_composants.entités.Adresse</class>
+    <class>fr.insset.baptisterigaux.jsf_templates_composants.entités.Ville</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>

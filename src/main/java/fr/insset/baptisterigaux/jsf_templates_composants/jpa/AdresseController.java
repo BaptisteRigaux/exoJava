@@ -1,9 +1,9 @@
-package fr.insset.paulgilliard.jsf_templates_composants.jpa;
+package fr.insset.baptisterigaux.jsf_templates_composants.jpa;
 
-import fr.insset.paulgilliard.jsf_templates_composants.entités.Adresse;
-import fr.insset.paulgilliard.jsf_templates_composants.jpa.util.JsfUtil;
-import fr.insset.paulgilliard.jsf_templates_composants.jpa.util.PaginationHelper;
-import fr.insset.paulgilliard.jsf_templates_composants.jsf.AdresseFacade;
+import fr.insset.baptisterigaux.jsf_templates_composants.entités.Adresse;
+import fr.insset.baptisterigaux.jsf_templates_composants.jpa.util.JsfUtil;
+import fr.insset.baptisterigaux.jsf_templates_composants.jpa.util.PaginationHelper;
+import fr.insset.baptisterigaux.jsf_templates_composants.jsf.AdresseFacade;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -25,7 +25,7 @@ public class AdresseController implements Serializable {
     private Adresse current;
     private DataModel items = null;
     @EJB
-    private fr.insset.paulgilliard.jsf_templates_composants.jsf.AdresseFacade ejbFacade;
+    private fr.insset.baptisterigaux.jsf_templates_composants.jsf.AdresseFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

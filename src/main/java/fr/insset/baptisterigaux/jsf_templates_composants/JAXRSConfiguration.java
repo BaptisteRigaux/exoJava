@@ -1,4 +1,4 @@
-package fr.insset.paulgilliard.jsf_templates_composants;
+package fr.insset.baptisterigaux.jsf_templates_composants;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
